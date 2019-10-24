@@ -4,6 +4,8 @@
 // of the files containing HTML or even better; in another PHP file altogether.
 require __DIR__.'/functions.php';
 require __DIR__.'/data.php';
+// sortArticles($articles);
+usort($articles,"compareDates");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,18 +16,19 @@ require __DIR__.'/data.php';
         <title>Plain News</title>
     </head>
     <body>
-
-        <?php foreach($articles as $article): ?>
-            <div class="article">
-                <h2><?php echo $article['title'] ?></h2>
-                <p><?php echo $article['content'] ?></p>
-                <div class ="articleFooter">
-                    <p><?php echo $article['date'] ?></p>
-                    <p><?php echo getAuthor($article,$authors) ?></p>
-                    <p><?php echo $article['likeCounter'] ?></p>
+        <article class="midFeed">
+            <?php foreach($articles as $article): ?>
+                <div class="article">
+                    <img src="/img/<?php echo $article['image'] ?>" class="articleImage">
+                    <h2><?php echo $article['title'] ?></h2>
+                    <p><?php echo $article['content'] ?></p>
+                    <div class ="articleFooter">
+                        <p>by <?php echo getAuthor($article,$authors) ?></p>
+                        <p>published <?php echo $article['date'] ?></p>
+                        <p>likes <?php echo $article['likeCounter'] ?></p>
+                    </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
-
+            <?php endforeach; ?>
+        </article>
     </body>
 </html>

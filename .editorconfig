@@ -15,6 +15,6 @@ indent_size = 4
 indent_size = 4
 trim_trailing_whitespace = false
 
-[*.cs]
+[*.css]
 indent_size = 4
 end_of_line = crlf

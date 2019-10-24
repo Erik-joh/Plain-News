@@ -1,0 +1,17 @@
+.midFeed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article{
+    width: 50%;
+    border-bottom: 4px solid black;
+    margin-bottom: 20px;
+}
+.articleFooter{
+    display: flex;
+    justify-content: space-between;
+}
+.articleImage{
+    width: 50%;
+}

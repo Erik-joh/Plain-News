@@ -10,3 +10,8 @@ function getAuthor(array $article, array $authors):string{
         }
     }
 }
+
+
+function compareDates(array $first, array $second){
+    return strtotime($second['date']) - strtotime($first['date']);
+}
