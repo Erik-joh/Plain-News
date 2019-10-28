@@ -10,8 +10,12 @@ function getAuthor(array $article, array $authors):string{
         }
     }
 }
-
-
-function compareDates(array $first, array $second){
-    return strtotime($second['date']) - strtotime($first['date']);
+function sortArticles(array $articles){
+    usort($articles, function (array $first, array $second){
+        return strtotime($second['date']) - strtotime($first['date']);
+    });
+    return $articles;
+}
+function getDMY(string $date){
+    return explode(" ",$date)[0];
 }

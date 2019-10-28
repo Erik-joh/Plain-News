@@ -1,17 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
 .midFeed{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .article{
-    width: 50%;
+    width: 90%;
     border-bottom: 4px solid black;
     margin-bottom: 20px;
 }
-.articleFooter{
+.article p {
+    margin-bottom: 30px;
+}
+.article h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.ADLContainer{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
+.ADLContainer p{
+    margin: 5px 0px;
+}
 .articleImage{
-    width: 50%;
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .article{
+        width: 70%;
+    }
+    .ADLContainer{
+        flex-direction: row;
+    }
+        /* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .article{
+        width: 60%;
+    }
 }
