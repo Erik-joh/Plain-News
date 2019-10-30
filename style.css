@@ -5,6 +5,21 @@
 }
 
 
+header{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.Menu{
+    display: flex;
+    height: 5vh;
+    width: 90%;
+    background-color: gray;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
 .midFeed{
     display: flex;
     flex-direction: column;
@@ -37,14 +52,21 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    .Menu{
+        width: 70%;
+    }
     .article{
         width: 70%;
     }
     .ADLContainer{
         flex-direction: row;
     }
+}
         /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+    .Menu{
+        width: 60%;
+    }
     .article{
         width: 60%;
     }

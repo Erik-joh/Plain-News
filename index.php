@@ -7,25 +7,20 @@ require __DIR__.'/functions.php';
 
 $fileName = __DIR__ . "/plainNews.db";
 $db = new PDO("sqlite:$fileName");
-$query = $db->query('SELECT * FROM articles INNER JOIN authors ON articles.author_id = authors.id ORDER BY date DESC');
+$query = $db->query('SELECT * FROM articles
+                    INNER JOIN authors ON articles.author_id = authors.id
+                    ORDER BY date DESC');
 $articles = $query->fetchAll(PDO::FETCH_ASSOC);
 
+require __DIR__.'/header.php';
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link href="style.css" rel="stylesheet">
-        <title>Plain News</title>
-    </head>
-    <body>
+
         <article class="midFeed">
             <?php foreach($articles as $article):?>
                 <div class="article">
                     <h2><?php echo $article['title'] ?></h2>
                     <div class ="ADLContainer">
-                        <p>by <?php echo $article['name'] ?></p>
+                        <a href="authorsArticles.php?authorId=<?php echo $article['author_id']; ?>">by <?php echo $article['name'] ?></a>
                         <p>Published: <?php echo getDMY($article['date']) ?></p>
                         <p>Likes: <?php echo $article['likes'] ?></p>
                     </div>
@@ -34,5 +29,5 @@ $articles = $query->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             <?php endforeach; ?>
         </article>
-    </body>
-</html>
+
+<?php require __DIR__.'/footer.php' ?>
