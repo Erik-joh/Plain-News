@@ -6,6 +6,11 @@
 * HTML
 * CSS
 
+## Functionality
+* Scrollable newsfeed
+* Sort articles by specific author
+* Getting a list of all authors
+
 ## Installation 
 * Clone this repo to your computer
 * start a php server in the location of this repo
