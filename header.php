@@ -9,8 +9,8 @@
     <body>
         <header>
             <section class="Menu">
-            <p>Home</p>
-            <a href="authors.php">Authors</p>
+            <a href="index.php">Home</a>
+            <a href="authors.php">Authors</a>
             <p>Menu</p>
             </section>
         </header>

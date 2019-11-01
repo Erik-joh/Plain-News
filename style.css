@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: orange;
+}
 
 header{
     display: flex;
@@ -48,6 +55,9 @@ header{
 .articleImage{
     margin: 10px 0;
     width: 100%;
+}
+.authorName{
+    margin: 10px 0px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
