@@ -17,11 +17,11 @@ header{
     justify-content: center;
     margin-top: 10px;
 }
-.Menu{
+.menu{
     display: flex;
     height: 5vh;
     width: 90%;
-    background-color: gray;
+    background-color: rgb(180, 180, 180);
     justify-content: space-around;
     align-items: center;
 
@@ -57,12 +57,13 @@ header{
     width: 100%;
 }
 .authorName{
-    margin: 10px 0px;
+    margin: 40px 0px;
+    font-size: 30px;
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .Menu{
+    .menu{
         width: 70%;
     }
     .article{
@@ -74,7 +75,7 @@ header{
 }
         /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .Menu{
+    .menu{
         width: 60%;
     }
     .article{

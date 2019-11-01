@@ -1,3 +1,10 @@
+<?php
+
+declare(strict_types=1);
+
+?>
+<!--This file loops out all articles from a query variable named articles -->
+
 <article class="midFeed">
     <?php foreach($articles as $article):?>
         <div class="article">

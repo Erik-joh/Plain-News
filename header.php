@@ -8,9 +8,8 @@
     </head>
     <body>
         <header>
-            <section class="Menu">
+            <section class="menu">
             <a href="index.php">Home</a>
             <a href="authors.php">Authors</a>
-            <p>Menu</p>
             </section>
         </header>

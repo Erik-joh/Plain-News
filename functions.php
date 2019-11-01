@@ -4,7 +4,14 @@ declare(strict_types=1);
 // execute/run any functions in this file. Keep it dumb.
 
 
-
-function getDMY(string $date){
-    return explode(" ",$date)[0];
+/**
+ * getDMY
+ *
+ * takes a string whith a dateTime and only returns the date.
+ *
+ * @param string $date
+ * @return string
+ */
+function getDMY(string $dateTime):string{
+    return explode(" ",$dateTime)[0];
 }
