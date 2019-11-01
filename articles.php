@@ -14,7 +14,7 @@ declare(strict_types=1);
                 <p>Published: <?php echo getDMY($article['date']) ?></p>
                 <p>Likes: <?php echo $article['likes'] ?></p>
             </div>
-            <img src="/img/<?php echo $article['image'] ?>" class="articleImage">
+            <img src="/img/<?php echo $article['image'] ?>" class="articleImage" alt="Puppy">
             <p><?php echo $article['content'] ?></p>
         </div>
     <?php endforeach; ?>
